@@ -1,0 +1,181 @@
+.employee-info-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .company-name {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .sign-out {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .system-title,
+  .system-subtitle {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .info-name {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+  
+  .button-bar {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .button-bar button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #4f81bd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-bar button:hover {
+    background-color: #0056b3;
+  }
+  
+  .input-container {
+    padding: 20px 0;
+  }
+  
+  
+  
+  
+  .input-container label,
+  .input-container input[type="text"],
+  .input-container button {
+    font-size: 0.9em;
+  }
+  
+  .input-container input[type="text"] {
+    padding: 7px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: auto; /* 让输入框根据内容自动调整宽度 */
+  }
+  
+  .input-container button {
+    padding: 7px 15px;
+    background-color: #4f81bd;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .input-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  hr {
+    border: none;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+  }
+  
+  .address-info,
+  .account-info {
+    margin-bottom: 20px;
+  }
+  
+  .address-info div,
+  .account-info div {
+    margin-bottom: 10px;
+  }
+  
+  .large-bold {
+    font-size: 1.2em;  /* 设置字体大小，1.2em 表示比正常大小大20% */
+    font-weight: bold; /* 设置字体为粗体 */
+  }
+  
+  .centered-button {
+      display: flex;            /* 使用Flexbox布局 */
+      justify-content: center;  /* 水平居中内容 */
+      align-items: center;      /* 垂直居中内容 */
+      height: 100px;            /* 设定div的高度，可以根据需要调整 */
+  }
+  
+  .centered-button button {
+      width: 100px;             /* 按钮宽度，可以根据需要调整 */
+      height: 40px;             /* 按钮高度，可以根据需要调整 */
+      font-size: 16px;          /* 字体大小，也可以根据需要调整 */
+      cursor: pointer;          /* 鼠标悬停时显示指针形状 */
+  }
+  
+  
+  .Master_Top1 {
+    position: fixed;
+    right: 200px;
+    top: 10px;
+  }
+  
+  .Master_Top2 {
+    position: fixed;
+    right: 80px;
+    top: 10px;
+  }
+  
+  .system-title {
+    text-align: center;
+  }
+  
+  .label-input-container {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+  }
+  
+  .label-input-container-long {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+  }
+  
+  .account-info div {
+    margin-bottom: 24px; /* 设置间距为24px */
+  }
+  
+  .address-info div {
+    margin-bottom: 24px; /* 设置间距为24px */
+  }
+  
+  /* 确保这个样式不被其他样式覆盖 */
+  .datepicker-container {
+    position: absolute;  /* 确保使用绝对定位，不受其他布局影响 */
+    z-index: 1000;       /* 置于最上层 */
+    margin: 0;           /* 移除外边距，确保不受到父级 div 的影响 */
+  }
+  
+  .input-container div,
+  .employee-info div {
+    margin-bottom: 20px;  /* 统一设置其他 div 的下边距 */
+  }
+  
+  .datepicker-container div{
+    margin-bottom: 0;           /* 移除外边距，确保不受到父级 div 的影响 */
+  }
+  
+  

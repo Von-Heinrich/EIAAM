@@ -1,0 +1,451 @@
+#root .ant-picker{
+  display:inline-block;
+  padding: 0%;
+  height: 15px;
+}
+
+
+
+.body{
+  color: rgb(152, 183, 210);
+}
+
+
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .company-name {
+    text-align: right;
+    width: 100%;
+  }
+  
+  .system-title {
+    text-align: center;
+    font-weight: bold;  
+    margin-top: 120px;
+    position:absolute;
+  }
+  .system-title2{
+    text-align: center;
+    font-weight: bold;  
+    position: relative;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 680px;
+    position: relative;
+    left: 50px;
+    margin-top: 130px;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    left: 80px;
+  }
+  
+  .form-label {
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .form-input {
+    /* flex: 1; */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .error-input {
+    border-color: red;
+  }
+  
+  .error-input2 {
+    border-color: red;
+  }
+
+  .error-placeholder {
+    width: 300px;
+    margin-left: -150px;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: red;
+    white-space: nowrap;
+    
+  }
+  
+  .login-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    left: 150px;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+
+  .Master_Top1 {
+    position: fixed;
+    right: 200px;
+    top: 10px;
+  }
+
+  .Master_Top2 {
+    position: fixed;
+    right: 80px;
+    top: 10px;
+  }
+
+  .Manage_Top1 {
+    position: relative;
+    left: 1100px;
+    top: 14px;
+  }
+
+  .Manage_Top2 {
+    position: relative;
+    left: 1150px;
+    top: 10px;
+  }
+
+
+  .Master_Box {
+    position: relative;
+    left: 100px;
+  }
+
+  .Btn1 {
+    width: 220px;
+    height: 130px;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .Btn2 {
+    width: 90px;
+    height: 50px;
+  }
+
+  .First_Row{
+    text-align: center;
+  }
+
+  .Second_Row{
+    text-align:left;
+  }
+  .Manage_Row{
+    display: inline-block;
+    text-align: left;
+    padding-left: 10%;
+  }
+
+  .Master_Bottom {
+    position: fixed;
+    left: 100px;
+    bottom: 30px;
+    cursor: pointer;
+  }
+  
+  .Btn0 {
+    width: 200px;
+    height: 130px;
+    margin-left: 67px;
+    margin-right: 50px;
+    visibility: hidden;
+    position: relative;
+  }
+
+  .Item_Div_Row{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+  }
+
+  .ItemSty{
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+  }
+
+  .InputSty{
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    margin-left: 10px;
+    border-color: red;
+  }
+
+  .InputSty2{
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    margin-left: 10px;
+    border-color: red;
+  }
+
+  .PwdReset_Btn {
+    display: inline-block;
+    text-align: center;
+    width: 70px;
+    height: 30px;
+  }
+
+  /* .PwdResetError-msg {
+    text-align: left;
+    padding-left: 10px;
+    color: red;
+  } */
+
+  .PwdResetError-msg {
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 控制垂直方向位置，根据需要调整 */
+    left: calc(65% + 10px); /* 控制水平方向位置，根据需要调整 */
+    color: red; /* 错误消息的样式，可以根据需要修改 */
+  }
+
+  .manage_branchNameNoError-msg {
+    display: inline-block;
+    width: 500px;
+    color: red; /* 错误消息的样式，可以根据需要修改 */
+    margin-left: 10px;
+  }
+
+
+  .Manage_Item{
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    margin-left: 30px;
+    background-color:lightblue;
+  }
+
+  .Manage_Clicked_Item{
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    margin-left: 30px;
+    background-color:aquamarine;
+  }
+
+  .Block_Item{
+    display: inline-block;
+    margin-left: 450px;
+  }
+
+  .Input_Item{
+    display: inline-block;
+    width: 60px;
+  }
+
+  .Bank_Input_Item{
+    display: inline-block;
+    width: 327px;
+    height: 22px;
+  }
+
+  .EmployeeNo_Input_Item{
+    display: inline-block;
+    width: 150px;
+  }
+  .EmployeeName_Input_Item{
+    display: inline-block;
+    width: 250px;
+  }
+
+  .Branch_Bank_Input{
+    display: inline-block;
+    width: 320px;
+  }
+
+  .Personal_Mail_Input{
+    display: inline-block;
+    width: 170px;
+  }
+
+  .Pwd_Input_Item{
+    display: inline-block;
+    width: 270px;
+  }
+
+  .Branch_Item{
+    display: inline-block;
+    width: 80px;
+  }
+
+  .Block_OR_Item{
+    display: inline-block;
+    margin-left: 50px;
+  }
+
+  .Block_Item2{
+    display: inline-block;
+    margin-left: 20px ;
+  }
+
+  .Branch_No_Item{
+    display: inline-block;
+    margin-left: 92px ;
+  }
+
+  .Bank_Item2{
+    display: inline-block;
+    margin-left: 20px ;
+  }
+
+  .BankInput_Item{
+    display: inline-block;
+    width:137px;
+  }
+
+  .Input_Item2{
+    display: inline-block;
+    width: 60px;
+  }
+
+  .line {
+    border-bottom: 1px solid black; /* 设置边框样式为实线，宽度为1像素，颜色为黑色 */
+    width: 80%; /* 设置线条宽度为画面的80% */
+    margin: 0 auto; /* 水平居中 */
+  }
+
+  .Second_Item{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    margin-left: 450px;
+  }
+
+  .Text_Item{
+    display: inline-block;
+    width: 80px;
+    margin-left: 450px;
+    font-weight: 1px;
+  }
+  .Year_Item{
+    display: inline-block;
+    margin-left: 5px ;
+    margin-right: 5px ;
+  }
+
+  .Mail_Item{
+    display: inline-block;
+    width: 238px;
+  }
+
+  .tel_Item{
+    display: inline-block;
+    width: 60px;
+  }
+
+  .tel_Item2{
+    display: inline-block;
+    margin-left: 5px ;
+  }
+  .tel_Item3{
+    display: inline-block;
+    margin-left: 5px ;
+    width: 60px;
+  }
+
+  .address_Item{
+    display: inline-block;
+    width: 100px;
+    margin-left: 450px;
+  }
+
+  .address_Btn{
+    display: inline-block;
+    width: 80px;
+    height: 25px;
+    margin-left: 8px;
+  }
+
+  .Calender_Btn{
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    margin-left: 8px;
+  }
+
+  .address_input{
+    display: inline-block;
+    width: 245px;
+  }
+
+  .address_input2{
+    display: inline-block;
+    width: 305px;
+  }
+
+  .MainDiv{
+    display: inline-block;
+    width: 1000px;
+  }
+
+  .Login_Btn{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+  }
+
+  .Manage_Btn{
+    position: relative;
+    margin-left: 600px;
+    width: 100px;
+    height: 30px;
+  }
+  .five-btns{
+    margin-top: 100px;
+  }
+  .EMbtn1{
+    width: 110px;
+    height: 40px;
+    border: 1px solid black;
+    text-align:center;
+    line-height: 40px;
+    font-weight: bold;            
+
+  }
+  .div1{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 100px;  
+    width: 800px;      
+    margin-left: 400px; 
+    margin-top: 20px;  
+  }
+  .inputAll{
+    margin-left: 120px;
+  }
+  .submitM1{
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+  

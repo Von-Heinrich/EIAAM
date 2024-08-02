@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}">默认的</title>
+	 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	 
+	<meta th:content="${description}" name="description" content="默认的description">
+	<meta th:content="${keywords}" name="keywords" content="默认的keywords">
+	 <style type="text/css">
+        #company{
+            margin-left:1340px;
+            margin-right: 10px;
+            margin-top:20px ;
+        }
+        .PrContext{/*title*/
+            text-align: center;
+        }
+        #info{
+            margin-top:100px;
+            
+        }
+        #loginS{
+           /* margin-top: 150px;
+           
+            text-align: center;*/
+            width: 100px;
+            height: 50px;
+            display:block;
+            margin: 150px auto 200px;
+            font-size: 20px;
+        }
+        #errorMessage{
+            text-align:center;
+            margin: top 180px;
+            color: #ff0000;
+        }
+
+
+    .employeeNoErrorMsgStyle{
+        display: inline-block;
+        width:300px;
+        height:20px
+
+    }
+
+
+
+    </style>
+</head>
+
+
+<body>
+		  <div class ="header">
+        <p id = "company" >LYC株式会社</p>
+    </div>
+    <div class ="PrContext">
+        <h1>社員勤務管理システム</h1>
+        <h4>社員ログイン</h4>
+    </div>
+
+<form name ="loginForm" onsubmit="return infoCheck()" action="/login" method = "post">
+    <table id="info" align="center">
+        <tr>
+            <td id ="um" ><span style="margin-left: 300px;">社  員  番  号:</span></td>
+            <td><input type="text" style="width:200px;height:20px" size="18" maxlength="6" id="employeeNo"></td>
+            <td><font color="red"><span class="employeeNoErrorMsgStyle" id="warnNo"></span></font></td> 
+        </tr>
+        <tr>
+            <td><span style="margin-left: 300px;">パスワード:&nbsp;&nbsp;</span></td>
+            <td><input type="password" style="width:200px;height:20px"  maxlength="12" size ="18" id="password"></td>
+            <td><font color="red"><span  id="warnPW"></span></font></td>
+        </tr>
+    </table>
+</form>
+
+    <div  id="errorMessage">
+        <p id = "EMLogin"></p>
+    </div>
+    <div id = "submit">
+        <input type="submit" value ="ログイン" id ="loginS" onclick="infoCheck()">
+    </div>
+	
+
+</body>
+
+<!-- <script th:src="@{/webjars/jquery/3.4.1/dist/jquery.min.js}" src="jquery/jquery-2.1.1.min.js"></script>
+<script th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}" src="bootstrap/js/bootstrap.min.js"></script>
+<script th:src="@{layer/layer.js}"></script> -->
+<script type ="text/javascript">
+	/*function f(){
+    if(typeof(jQuery)=="undefined"){
+           alert("jQuery is not imported");
+       }else{
+           alert("jQuery is imported");
+       }
+}*/
+
+    function infoCheck() {
+    	
+        // 非空校验
+        var employeeNo = $("#employeeNo").val();
+      
+        var password = $("#password").val();
+      
+        var employeeNoInput = document.getElementById("employeeNo");
+        var warnNo = document.getElementById("warnNo");
+        warnNo.style.visibility = "hidden";
+        var regExp1 = /^[A-Z a-z 0-9]{6}$/;
+        var password = document.getElementById("password").value;
+        var passwordInput = document.getElementById("password");
+        var warnPW = document.getElementById("warnPW");
+        var regExp2 =/^[A-Z a-z 0-9]{6,12}$/;
+        warnPW.style.visibility = "hidden";
+        passwordInput.style.borderColor = "red";
+        if (employeeNoInput.value == "" || employeeNoInput.value == null) {
+            EMLogin.style.visibility = "hidden";
+            employeeNoInput.style.borderColor = "red";
+            document.getElementById("warnNo").innerHTML = "社員番号を入カしてください!";
+            document.getElementById("warnNo").style.visibility = "visible";
+
+            return false;
+        } else if((employeeNoInput.value.length < 5 &&employeeNoInput.value.length > 0) || (employeeNo[0] + employeeNo[1] + employeeNo[2] != "lyc"))
+        {
+        	 employeeNoInput.style.borderColor = "red";
+            document.getElementById("warnNo").innerHTML = "正しい社員番号を入カしてください!";
+            document.getElementById("warnNo").style.visibility = "visible";
+            EMLogin.style.visibility = "hidden";
+            return false;
+        } else if(!regExp1.test(employeeNo)){
+        	 employeeNoInput.style.borderColor = "red";
+            document.getElementById("warnNo").innerHTML = "社員番号やパスソ-ドが英字また数字以外を存在する!";
+            document.getElementById("warnNo").style.visibility = "visible";
+            document.getElementById("warnNo").style.color = "red";
+            EMLogin.style.visibility = "hidden";
+            return false;
+
+        }
+      else if (passwordInput.value == "" || passwordInput.value == null) {
+    	  passwordInput.style.borderColor = "red";
+            document.getElementById("warnPW").innerHTML = "パスフ-ドを入カしでください!";
+            document.getElementById("warnPW").style.visibility = "visible";
+            EMLogin.style.visibility = "hidden";
+            return false;
+        }else if(passwordInput.value.length < 5 && passwordInput.value.length > 0)
+        {
+        	passwordInput.style.borderColor = "red";
+            document.getElementById("warnPW").innerHTML = "5桁以上のパスフ-ドを入カしでください!";
+            document.getElementById("warnPW").style.visibility = "visible";
+            EMLogin.style.visibility = "hidden";
+            return false;
+        } else if(!regExp2.test(password)){
+        	passwordInput.style.borderColor = "red";
+            document.getElementById("warnPW").innerHTML = "社員番号やパスソ-ドが英字また数字以外を存在する!";
+            document.getElementById("warnPW").style.visibility = "visible";
+            EMLogin.style.visibility = "hidden";
+            return false;
+        }
+			return true;
+    }
+    $("#loginS").click(function(){
+        // 提交表单
+        // alert("提交表单");
+        //$("#loginForm").submit();
+        // 使用AJAX提交数据
+        
+        var  usedata = {};
+        usedata['employeeNo']= employeeNo;
+        usedata['password']= password;
+ 		console.log(usedata+'usedata');
+        $.ajax({
+        	
+            type: "GET",
+            contentType: "application/json",
+            url: "http://localhost:8080/login",
+            data: JSON.stringify(usedata),
+            success: function (result) {
+            	
+               
+                if (result.success) {
+               
+                    window.location.href = "http://localhost:8080/index";
+                } else {
+                	
+                	document.getElementById("EMLogin").innerHTML = "あらためて社員番号やパスワードを審査してください";
+                }
+            }
+        });
+    })
+</script>
+	
+	
+	
+
+
+</html>
