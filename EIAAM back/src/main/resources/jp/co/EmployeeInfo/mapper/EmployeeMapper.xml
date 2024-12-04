@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.EmployeeInfo.mapper.EmployeeMapper">
+    <resultMap id="EmployeePojoMap" type="jp.co.EmployeeInfo.pojo.EmployeePojo">
+
+    </resultMap>
+ <update id="passwordReset">
+        update employee set password=#{newPassword} where employeeNo = #{employeeNo}
+     </update>
+    
+</mapper>

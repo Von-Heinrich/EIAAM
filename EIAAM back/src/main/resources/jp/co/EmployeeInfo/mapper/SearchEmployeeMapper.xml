@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.EmployeeInfo.mapper.SearchEmployeeMapper">
+    <select id="SearchEmployees" parameterType="map" resultType="SearchEmployee">
+		        SELECT 
+		    e.employeeNo,
+		    e.employeeName,
+		    ed.genderCode,
+		    ed.JoiningCompanyOfYear,
+		    ed.intoCompanyOfMonth,
+		    ed.salary,
+		    ed.age
+		FROM 
+		    employee e
+		JOIN 
+		    employee_detail ed ON e.employeeNo = ed.employeeNo;
+    </select>
+</mapper>
